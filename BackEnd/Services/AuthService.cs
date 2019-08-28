@@ -41,10 +41,6 @@ namespace BackEnd.Services
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWTConfiguration:SymmetricKey"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             
-            Console.WriteLine(JwtRegisteredClaimNames.Sub);
-            Console.WriteLine(JwtRegisteredClaimNames.Email);
-            Console.WriteLine(JwtRegisteredClaimNames.UniqueName);
-
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Username),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),

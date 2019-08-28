@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RequestPanelComponent } from './components/request-panel-component/request.panel.component';
+import { RequestProvider } from './providers/request.provider';
 
 @NgModule({
   declarations: [
-    AppComponent
+    RequestPanelComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    NgxJsonViewerModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    RequestProvider
+  ],
+  bootstrap: [RequestPanelComponent]
 })
 export class AppModule { }
