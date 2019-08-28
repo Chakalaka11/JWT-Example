@@ -1,11 +1,11 @@
 <div class="main-container" uk-grid>
-  <div class="functions-container uk-width-1-2">
+    <div class="functions-container uk-width-1-2">
 
-    <button class="uk-button uk-button-default" (click)="requestJwtToken()">Get JWT token</button>
-    <button class="uk-button uk-button-default" (click)="requestJwtToken()">Get test user info</button>
-    <button class="uk-button uk-button-default">Show used JWT token</button>
-  </div>
-  <div class="result-container uk-width-1-2">
-    <ngx-json-viewer *ngIf="responseData != undefined" [json]="responseData"></ngx-json-viewer>
-  </div>
+        <button class="uk-button uk-button-default" (click)="requestJwtToken()">Get JWT token</button>
+        <button class="uk-button uk-button-default" (click)="requestJwtToken()">Get test user info</button>
+        <button class="uk-button uk-button-default">Show used JWT token</button>
+    </div>
+    <div class="result-container uk-width-1-2">
+        <ngx-json-viewer *ngIf="responseData != undefined" [json]="responseData"></ngx-json-viewer>
+    </div>
 </div>
